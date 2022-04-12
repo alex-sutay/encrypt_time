@@ -43,7 +43,7 @@ def time_encrypt(infile):
 
     # DESX
     print('\tStarting DESX...')
-    encryptor = DESX.new(Random.get_random_bytes(24), DESX.MODE_ECB)
+    encryptor = DESX.new(Random.get_random_bytes(23), DESX.MODE_ECB)
     encryptor.encrypt(data)
     end = time.time()
     rtn_dict['DESX'] = end - start
